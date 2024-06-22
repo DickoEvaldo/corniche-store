@@ -22,9 +22,24 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth();
 // init services
-const database = getFirestore();
+export const db = getFirestore();
 
 // collection ref
-const colRef = collection(database, 'foods');
+export const colRef = collection(db, "clothes")
 
 // get collection data
+
+export const getClothesData = async () => {
+    try {
+      const querySnapshot = await getDocs(colRef);
+      const clothesData = querySnapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data()
+      }));
+      return clothesData; // Return the fetched data
+    } catch (error) {
+      console.error("Error fetching clothes data:", error);
+      return []; // Return an empty array if there's an error
+    }
+  };
+  

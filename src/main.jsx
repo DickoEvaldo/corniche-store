@@ -8,7 +8,7 @@ import Login from "./routes/Login.jsx";
 import { Signup } from "./routes/Signup.jsx";
 import Profile from "./routes/Profile.jsx";
 import Store from "./routes/Store.jsx";
-
+import { CartProvider } from "./components/CartContext.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -38,6 +38,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <CartProvider>
+      <RouterProvider router={router} />
+    </CartProvider>
   </React.StrictMode>
 );
