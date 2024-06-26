@@ -76,7 +76,11 @@ export const Signup = () => {
           sx={{ marginTop: 2 }}
         />
         <Button
-          sx={{ color: "white", backgroundColor: "black", marginTop: 2 }}
+          sx={{
+            color: "white",
+            backgroundColor: "black",
+            marginTop: 2,
+          }}
           onClick={submitChange}
         >
           Sign UP

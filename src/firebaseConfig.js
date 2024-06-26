@@ -26,7 +26,7 @@ export const db = getFirestore();
 
 // collection ref
 export const colRef = collection(db, "clothes")
-
+const profileRef = collection(db, "profile")
 // get collection data
 
 export const getClothesData = async () => {
@@ -36,10 +36,14 @@ export const getClothesData = async () => {
         id: doc.id,
         ...doc.data()
       }));
-      return clothesData; // Return the fetched data
+      return clothesData;
     } catch (error) {
       console.error("Error fetching clothes data:", error);
-      return []; // Return an empty array if there's an error
+      return []; 
     }
   };
+
+// export const setProfileData = async () => {
+    
+// }
   

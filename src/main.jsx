@@ -9,6 +9,7 @@ import { Signup } from "./routes/Signup.jsx";
 import Profile from "./routes/Profile.jsx";
 import Store from "./routes/Store.jsx";
 import { CartProvider } from "./components/CartContext.jsx";
+import CartPage from "./routes/CartPage.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
   {
     path: "/store",
     element: <Store />,
+  },
+  {
+    path: "/cart",
+    element: <CartPage />,
   },
 ]);
 

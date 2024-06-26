@@ -7,6 +7,7 @@ import { Button } from "@mui/material";
 import ItemCarousel from "../components/itemCarousel";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import stock1 from "../assets/stock1.jpg";
 function Main() {
   return (
     <>
@@ -56,6 +57,22 @@ function Main() {
           </h1>
           <div className="mt-12">
             <ItemCarousel></ItemCarousel>
+          </div>
+        </div>
+        <div className="flex flex-col p-8">
+          <div className="flex justify-between">
+            <div className="flex flex-col self-center gap-6">
+              <h1 className="text-5xl" style={{ fontFamily: "SuisseWorks" }}>
+                Own your style
+              </h1>
+              <h3 className="text-xl">
+                Crafted for those extraordinary moments where the only limit is
+                your imagination. Boldly express yourself in dresses that take
+                you from day to night, exclusively from our boutique in Bandung.
+              </h3>
+            </div>
+
+            <img src={stock1} alt="" className="w-1/2 mt-10 p-12" />
           </div>
         </div>
         <footer className="flex mt-auto p-6">

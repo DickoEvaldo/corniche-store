@@ -7,9 +7,11 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { auth } from "../firebaseConfig";
 import { signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
+import CircularProgress from "@mui/material/CircularProgress";
 const Login = () => {
   const navigate = useNavigate();
   const [user, setUser] = useState({});
+  const [loading, setLoading] = useState(false);
   const [personalDetails, setPersonalDetails] = useState({
     email: "",
     password: "",
@@ -36,13 +38,16 @@ const Login = () => {
 
   const submitChange = async () => {
     try {
+      setLoading(true);
       const user = await signInWithEmailAndPassword(
         auth,
         personalDetails.email,
         personalDetails.password
       );
+      setLoading(false);
     } catch (error) {
       console.log(error.message);
+      setLoading(false);
     }
   };
   return (
@@ -71,19 +76,25 @@ const Login = () => {
             onChange={handleChange}
             sx={{ marginTop: 2 }}
           />
-          <Button
-            onClick={submitChange}
-            sx={{
-              color: "white",
-              backgroundColor: "black",
-              marginTop: 2,
-              "&:hover": {
-                backgroundColor: "green", // Change the hover color to gray
-              },
-            }}
-          >
-            Sign In
-          </Button>
+          {loading ? (
+            <CircularProgress
+              sx={{ alignSelf: "center", marginTop: 3 }}
+            ></CircularProgress>
+          ) : (
+            <Button
+              onClick={submitChange}
+              sx={{
+                color: "white",
+                backgroundColor: "black",
+                marginTop: 2,
+                "&:hover": {
+                  backgroundColor: "green", // Change the hover color to gray
+                },
+              }}
+            >
+              Sign In
+            </Button>
+          )}
           <div className="border border-t-gray-500 mt-8"></div>
           <Button
             sx={{ color: "black", marginTop: 4, border: "1px solid black" }}
