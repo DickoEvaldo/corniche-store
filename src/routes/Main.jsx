@@ -51,12 +51,12 @@ function Main() {
         </div>
       </div>
       <div className="flex flex-col min-h-screen">
-        <div className="flex flex-col p-8 md:mt-6">
+        <div className="flex flex-col py-8 md:mt-6 md:p-8">
           <h1
-            className="text-4xl md:text-5xl font-medium"
+            className="text-4xl px-8 md:text-5xl md:px-0 font-medium"
             style={{ fontFamily: "SuisseWorks" }}
           >
-            Recommended for you
+            Recommended For you
           </h1>
           <div className="mt-6 md:mt-12">
             <ItemCarousel></ItemCarousel>
