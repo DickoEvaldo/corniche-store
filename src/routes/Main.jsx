@@ -29,14 +29,14 @@ function Main() {
               >
                 2024 Summer Sale
               </Heading>
-              <h2 className="text-xl">
+              <h2 className="text-lg md:text-xl">
                 The last big chance this summer! Enjoy up to 85% off and special
                 promotions
               </h2>
               <Link to="/store">
                 <Button
                   variant="outlined"
-                  className="w-6/12"
+                  className="w-full md:w-6/12"
                   sx={{
                     color: "black",
                     border: "1px solid black",
@@ -52,29 +52,39 @@ function Main() {
       </div>
       <div className="flex flex-col min-h-screen">
         <div className="flex flex-col p-8 md:mt-6">
-          <h1 className="text-5xl" style={{ fontFamily: "SuisseWorks" }}>
+          <h1
+            className="text-4xl md:text-5xl font-medium"
+            style={{ fontFamily: "SuisseWorks" }}
+          >
             Recommended for you
           </h1>
-          <div className="mt-12">
+          <div className="mt-6 md:mt-12">
             <ItemCarousel></ItemCarousel>
           </div>
         </div>
         <div className="flex flex-col px-8 mt-8 md:mt-0">
           <div className="flex flex-col justify-between md:flex-row">
             <div className="flex flex-col self-center gap-6">
-              <h1 className="text-5xl" style={{ fontFamily: "SuisseWorks" }}>
+              <h1
+                className="text-4xl text-center md:text-5xl md:text-start font-medium"
+                style={{ fontFamily: "SuisseWorks" }}
+              >
                 Own your style
               </h1>
-              <h3 className="text-xl">
+              <h3 className="text-lg text-center md:text-xl md:text-start">
                 Crafted for those extraordinary moments where the only limit is
                 your imagination. Boldly express yourself in dresses that take
                 you from day to night, exclusively from our boutique in Bandung.
               </h3>
             </div>
-            <img src={stock1} alt="" className="w-1/2 mt-10 p-12" />
+            <img
+              src={stock1}
+              alt=""
+              className=" p-2 h-6/12 mt-4 md:w-1/2 md:mt-10 md:p-12"
+            />
           </div>
         </div>
-        <footer className="flex mt-auto p-6">
+        <footer className="flex mt-auto p-6 mt-18">
           <p className="text-sm text-gray-500">
             Corniche Co.,Ltd may not be the direct seller but only an
             intermediary for some products. In this case, Corniche has limited

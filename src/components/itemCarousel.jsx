@@ -40,7 +40,7 @@ function ItemCarousel() {
     ],
   };
   return (
-    <div className="slider-container">
+    <div className="slider-container ml-8 md:ml-0">
       <Slider {...settings}>
         <ItemBox
           name={"Fayra Blouse"}
