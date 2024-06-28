@@ -15,11 +15,13 @@ const Navbar = () => {
       </div>
       <div className="flex self-center">
         <Link to="/main">
-          <h1 className="text-4xl font-semibold tracking-wider">Corniche</h1>
+          <h1 className="text-4xl font-semibold tracking-wider mr-16 md:mr-0">
+            Corniche
+          </h1>
         </Link>
       </div>
       <div className="flex align-middle">
-        <div className="flex gap-6 self-center">
+        <div className="gap-6 self-center hidden md:flex">
           <h3>Call us</h3>
           <Link to="/profile">
             <PersonOutlineIcon></PersonOutlineIcon>

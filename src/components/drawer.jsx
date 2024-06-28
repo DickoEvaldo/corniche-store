@@ -57,7 +57,8 @@ export default function DrawerExample() {
           fontFamily: "inter, system-ui, Avenir, Helvetica, Arial, sans-serif;",
         }}
       >
-        <MenuIcon className="mr-6"></MenuIcon>Menu
+        <MenuIcon className="mr-6"></MenuIcon>
+        <span className="hidden sm:inline">Menu</span>
       </Button>
       <Drawer open={open} onClose={toggleDrawer(false)}>
         {DrawerList}

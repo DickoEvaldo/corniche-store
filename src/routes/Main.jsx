@@ -11,20 +11,20 @@ import stock1 from "../assets/stock1.jpg";
 function Main() {
   return (
     <>
-      <div className="flex flex-col min-h-screen">
+      <div className="flex flex-col h-full">
         <Navbar></Navbar>
-        <div className="flex flex-col mt-6 p-6">
-          <div className="flex gap-12">
-            <div className="w-6/12">
+        <div className="flex flex-col mt-2 p-6 md:mt-6">
+          <div className="gap-12 md:flex">
+            <div className="w-full md:w-6/12">
               <DemoCarousel></DemoCarousel>
             </div>
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              className="flex flex-col self-center"
+              className="flex flex-col self-center mt-10 md:mt-0"
             >
               <Heading
-                className="text-6xl font-medium"
+                className="text-4xl md:text-6xl font-medium"
                 fontFamily={"SuisseWorks"}
               >
                 2024 Summer Sale
@@ -51,7 +51,7 @@ function Main() {
         </div>
       </div>
       <div className="flex flex-col min-h-screen">
-        <div className="flex flex-col mt-6 p-8">
+        <div className="flex flex-col p-8 md:mt-6">
           <h1 className="text-5xl" style={{ fontFamily: "SuisseWorks" }}>
             Recommended for you
           </h1>
@@ -59,8 +59,8 @@ function Main() {
             <ItemCarousel></ItemCarousel>
           </div>
         </div>
-        <div className="flex flex-col p-8">
-          <div className="flex justify-between">
+        <div className="flex flex-col px-8 mt-8 md:mt-0">
+          <div className="flex flex-col justify-between md:flex-row">
             <div className="flex flex-col self-center gap-6">
               <h1 className="text-5xl" style={{ fontFamily: "SuisseWorks" }}>
                 Own your style
@@ -71,7 +71,6 @@ function Main() {
                 you from day to night, exclusively from our boutique in Bandung.
               </h3>
             </div>
-
             <img src={stock1} alt="" className="w-1/2 mt-10 p-12" />
           </div>
         </div>
